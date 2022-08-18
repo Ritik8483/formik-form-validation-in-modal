@@ -1,24 +1,19 @@
 {
-    "employee":[
-        {
-            "id":1,
-            "name":"ritik nathan",
-            "email":"gfjn@gmail.co.in"
-        },
-        {
-            "id":2,
-            "name":"anjali xuv",
-            "email":"xuv100@gmail.co.in"
-        },
-        {
-            "id":3,
-            "name":"prakash sinha",
-            "email":"sinha909@gmail.co.in"
-        },
-        {
-            "id":4,
-            "name":"daisy wheel",
-            "email":"daisy@gmail.co.in"
-        }
-    ]
+  "employee": [
+    {
+      "id": 3,
+      "name": "Billi Pandat 12345",
+      "email": "rrajputmnbvcd@gmail.com"
+    },
+    {
+      "name": "Ritik Chauhan",
+      "email": "admin@mapi-app.io",
+      "id": 4
+    },
+    {
+      "name": "sdsdds",
+      "email": "Test@gmail.com",
+      "id": 5
+    }
+  ]
 }
