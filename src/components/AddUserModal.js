@@ -9,7 +9,7 @@ import { useDispatch } from "react-redux";
 import { addNewEmployee, getAllEmployee, resetDetails, updateEmployeeData } from "../slices/employeeSlice";
 import { ToastContainer, toast } from 'react-toastify';
 
-const AddUserModal = ({ addModal,onHide, setAddModal,employeeDetail }) => {
+const AddUserModal = ({ addModal,onHide, setAddModal,employeeDetail,isLastPage }) => {
     const dispatch=useDispatch();
     const [enableEdit,setEnableEdit]=useState(true);
   const initialValues = {
@@ -31,13 +31,15 @@ const AddUserModal = ({ addModal,onHide, setAddModal,employeeDetail }) => {
       setTimeout(() => {
         onHide();
         update();
+      // dispatch(getAllEmployee());
       }, 500);
     }
     else{
-      dispatch(addNewEmployee(values));
+      dispatch(addNewEmployee({values:values,isLastPage:isLastPage}));
       setTimeout(() => {
           setAddModal(false);
           notify();
+          dispatch(getAllEmployee());
       }, 50);
       setEnableEdit(false);
     }
